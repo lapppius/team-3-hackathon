@@ -1,0 +1,11 @@
+:host {
+  header {
+    padding: 1rem;
+    border: 1px solid var(--primary-border-color);
+    border-radius: var(--medium-border-radius);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
