@@ -6,8 +6,6 @@ import { PasswordModule } from 'primeng/password';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 interface AccountType {
   name: string;
@@ -24,8 +22,6 @@ interface AccountType {
     FloatLabelModule,
     ButtonModule,
     DropdownModule,
-    BrowserAnimationsModule,
-    NoopAnimationsModule,
   ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss',
@@ -44,7 +40,6 @@ export class SignupComponent implements OnInit {
     console.log(this.signupForm.value);
   }
   ngOnInit() {
-    console.log('init');
     this.accountTypes = [{ name: 'Payer' }, { name: 'Shopper' }];
   }
 }

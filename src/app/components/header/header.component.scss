@@ -1,0 +1,12 @@
+header {
+  border-bottom: 1px solid var(--primary-border-color);
+  padding: 0.7rem;
+
+  position: sticky;
+  top: 0;
+  nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}

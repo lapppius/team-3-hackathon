@@ -1,0 +1,6 @@
+<ul>
+  @for(navLink of navLinks; track navLink.title){
+
+  <app-nav-link [title]="navLink.title" [path]="navLink.path" />
+  }
+</ul>
