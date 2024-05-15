@@ -1,0 +1,23 @@
+<div>
+   <app-box [title]="'Bank Account Info'">
+    <form>
+        <ng-container>
+        <div class="button-container">
+        <p-floatLabel>
+            <input pInputText id="shopperIBAN" />
+            <label for="shopperIBAN">IBAN</label>
+        </p-floatLabel>
+        <p-floatLabel>
+            <input pInputText id="shopperBankName" />
+            <label for="shopperBankName">Bank Name</label>
+        </p-floatLabel>
+        <p-floatLabel>
+            <input pInputText id="email" />
+            <label for="email">email</label>
+        </p-floatLabel>
+        <p-button label="Save bank account info" />
+        </div>
+    </ng-container>
+    </form>
+    </app-box>
+</div>

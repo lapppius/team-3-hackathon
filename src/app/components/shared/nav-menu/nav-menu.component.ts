@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NavLinkComponent } from '../nav-link/nav-link.component';
-import { NavLink } from '../../models/app-models';
+import { NavLink } from '../../../models/app-models';
 
 @Component({
   selector: 'app-nav-menu',

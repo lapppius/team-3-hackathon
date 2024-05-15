@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { NavLink } from '../../../models/app-models';
 import { NavMenuComponent } from '../nav-menu/nav-menu.component';
-import { NavLink } from '../../models/app-models';
 
 @Component({
   selector: 'app-header',
