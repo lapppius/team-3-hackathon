@@ -1,9 +1,9 @@
 <div class="signup">
-  <app-box>
+  <app-box [title]="'Sign Up'">
     <form [formGroup]="signupForm" (ngSubmit)="handleSubmit()">
       <p-floatLabel>
-        <input pInputText id="username" formControlName="email" />
-        <label for="username">Username</label>
+        <input pInputText id="email" formControlName="email" type="email" />
+        <label for="emai">email</label>
       </p-floatLabel>
       <p-floatLabel>
         <p-password formControlName="password" [feedback]="false" />
