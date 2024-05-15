@@ -1,0 +1,18 @@
+<div class="signup">
+    <app-box [title]="'Log in'">
+        <form>
+                <p-floatLabel>
+                    <input pInputText />
+                    <label for="email">Email</label>
+                </p-floatLabel>
+                <small>
+                    Please enter your email to log in.
+                </small>
+                <p-floatLabel>
+                    <p-password formControlName="confirmPassword" [feedback]="false" />
+                    <label for="confirmPassword">Password</label>
+                  </p-floatLabel>
+                <p-button [routerLink] = "['/shopProfile']" label="Log in" />
+        </form>
+    </app-box>
+</div>
