@@ -8,6 +8,10 @@
   --small-border-radius: 3%;
   --medium-border-radius: 16px;
   --large-border-radius: 50%;
+  --content-width: 1100px;
+  --wide-width: 1500px;
+  --small-screens-width: 600px;
+
   padding: 0;
   margin: 0;
 }
@@ -25,8 +29,12 @@ body {
 header {
   flex: 0 0 auto;
 }
+
 main {
+  width: 100%;
   height: 100%;
   flex: 1;
   overflow-y: auto;
+  padding: 1rem;
+  max-width: var(--content-width);
 }
