@@ -1,3 +1,4 @@
+
 import { RouterLink } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
@@ -6,39 +7,27 @@ import { ITransaction } from '../../shared/interface/transaction.interface';
 import { BoxComponent } from '../../box/box.component';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'primeng/calendar';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+// import { ProductService } from '@service/productservice';
 
 @Component({
   selector: 'app-view-transaction-history',
   standalone: true,
-  imports: [
-    RouterLink,
-    TableModule,
-    CommonModule,
-    BoxComponent,
-    FormsModule,
-    CalendarModule,
-    HttpClientModule,
-  ],
+  imports: [RouterLink, TableModule, CommonModule, BoxComponent, FormsModule, CalendarModule],
   templateUrl: './view-transaction-history.component.html',
-  styleUrl: './view-transaction-history.component.scss',
+  styleUrl: './view-transaction-history.component.scss'
 })
+
 export class ViewTransactionHistoryComponent {
-  transactions!: ITransaction[];
+    transactions!: ITransaction[];
 
-  constructor(private http: HttpClient) {}
+    constructor() {}
+  
+    rangeDates: Date[] | undefined;
 
-  public shopId: string | null = '87654321';
-
-  ngOnInit() {
-    this.http
-      .get<ITransaction[]>(
-        `http://localhost:8080/transactions/to/${this.shopId}`
-      )
-      .subscribe((data) => {
-        console.log('data: ', data);
-        this.transactions = data;
-      });
-    console.log('ngOnInit: ', this.transactions);
-  }
+    ngOnInit() {
+        
+    }
 }
+
+
