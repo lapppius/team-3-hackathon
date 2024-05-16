@@ -8,7 +8,6 @@ import { BoxComponent } from '../../box/box.component';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'primeng/calendar';
 
-// import { ProductService } from '@service/productservice';
 
 @Component({
   selector: 'app-view-transaction-history',
