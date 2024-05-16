@@ -1,0 +1,27 @@
+<div class="signup">
+  <app-box [title]="'Sign Up'">
+    <form [formGroup]="signupForm" (ngSubmit)="handleSubmit()">
+      <p-floatLabel>
+        <input pInputText id="email" formControlName="email" type="email" />
+        <label for="emai">email</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <p-password formControlName="password" [feedback]="false" />
+        <label for="password">Password</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <p-password formControlName="confirmPassword" [feedback]="false" />
+        <label for="confirmPassword">Confirm Password</label>
+      </p-floatLabel>
+
+      <p-dropdown
+        [options]="accountTypes"
+        formControlName="selectedType"
+        optionLabel="name"
+        placeholder="Select account type"
+      />
+
+      <p-button label="Submit" type="submit" />
+    </form>
+  </app-box>
+</div>
