@@ -7,17 +7,17 @@
     <ng-template pTemplate="header">
       <tr>
         <th>Date</th>
-        <th>Payer Name</th>
+        <th>Payer ID</th>
         <th>Amount</th>
         <th>Fee</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-transaction>
       <tr>
-        <td>{{ transaction.date }}</td>
+        <td>{{ transaction.date | date : "yyyy-MM-dd HH:mm:ss" }}</td>
         <td>{{ transaction.fromId }}</td>
-        <td>{{ transaction.amount }} ¤</td>
-        <td>{{ transaction.amount * 0.02 }} ¤</td>
+        <td>{{ transaction.amount | currency : "EUR" : true }}</td>
+        <td>{{ transaction.amount * 0.02 | currency : "EUR" : true }}</td>
       </tr>
     </ng-template>
   </p-table>
