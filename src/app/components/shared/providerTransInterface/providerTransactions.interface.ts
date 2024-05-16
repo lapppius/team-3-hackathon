@@ -1,7 +1,7 @@
-export interface ITransaction {
+export interface ITransactionProv {
   transactionId?: string | undefined;
   date: Date | undefined;
-  FromId: string | undefined;
+  toId: string | undefined;
+  fromId: string | undefined;
   amount: number | undefined;
-  // fee: number | undefined;
 }

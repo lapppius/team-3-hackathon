@@ -1,20 +1,12 @@
-:host {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+header {
   border-bottom: 1px solid var(--primary-border-color);
+  padding: 0.7rem;
 
-  header {
-    padding: 0.7rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    max-width: var(--wide-width);
-
-    nav {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-    }
+  position: sticky;
+  top: 0;
+  nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
 }
