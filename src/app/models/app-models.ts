@@ -37,6 +37,14 @@ export interface User {
 }
 
 export interface Feature {
-  title: 'string';
-  icon: PrimeIcons;
+  title: string;
+  icon: string;
+}
+
+export interface ITransaction {
+  transactionId?: string | undefined;
+  date: Date | undefined;
+  sourceName: string | undefined;
+  amount: number | undefined;
+  fee: number | undefined;
 }

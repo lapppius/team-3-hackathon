@@ -33,7 +33,7 @@ export class ViewTransactionHistoryComponent {
   ngOnInit() {
     this.http
       .get<ITransaction[]>(
-        `http://localhost:3001/transactions/to/${this.shopId}`
+        `http://localhost:8080/transactions/to/${this.shopId}`
       )
       .subscribe((data) => {
         console.log('data: ', data);
