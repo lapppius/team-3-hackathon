@@ -9,10 +9,12 @@ import { ShopperProfilComponent } from './components/shopper/shopper-profil/shop
 import { ProfileComponent } from './components/profile/profile.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { ProviderComponent } from './components/provider/provider.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'providerProfile', component: ProviderComponent },
   { path: 'shopProfile', component: ShopperProfilComponent },
   {
     path: 'shopProfile/addBankAccount',
