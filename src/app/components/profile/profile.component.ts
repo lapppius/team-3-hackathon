@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
-import { ProfileHeaderComponent } from '../profile-header/profile-header.component';
-import { Payer } from '../../models/app-models';
-import { PayerService } from '../../services/payer.service';
+import { Component, OnInit, inject } from '@angular/core';
+import { ProfileHeaderComponent } from '../shared/profile-header/profile-header.component';
+import { User } from '../../models/app-models';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,11 +10,17 @@ import { PayerService } from '../../services/payer.service';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
 })
-export class ProfileComponent {
-  payer!: Payer;
+export class ProfileComponent implements OnInit {
+  user!: User;
 
-  payerService = inject(PayerService);
-  constructor() {
-    this.payer = this.payerService.getPayerProfile();
+  userService = inject(UserService);
+  constructor() {}
+
+  ngOnInit() {
+    this.userService
+      .getUserProfile('ede36c97-379a-4cae-b1e4-483ad8289ece')
+      .subscribe((res) => {
+        this.user = res;
+      });
   }
 }

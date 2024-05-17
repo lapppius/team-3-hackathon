@@ -2,7 +2,7 @@
   <form [formGroup]="signupForm" (ngSubmit)="handleSubmit()">
     <p-floatLabel>
       <input pInputText id="email" formControlName="email" type="email" />
-      <label for="emai">email</label>
+      <label for="email">email</label>
     </p-floatLabel>
     <p-floatLabel>
       <p-password formControlName="password" [feedback]="false" />
@@ -19,5 +19,6 @@
       placeholder="Select account type"
     />
     <p-button label="Submit" type="submit" />
+    <small><a routerLink="/login"> Already Have an account? </a> </small>
   </form>
 </app-box>

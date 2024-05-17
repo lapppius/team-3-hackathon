@@ -1,20 +1,42 @@
+import { PrimeIcons } from 'primeng/api';
+
 export interface NavLink {
   title: string;
   path: string;
 }
 
+export enum PaymentAccountType {
+  PAYPAL,
+  BANK,
+}
+
+export enum AccountRole {
+  ADMIN,
+  PAYER,
+  SHOPPER,
+}
+
 export interface User {
-  email: string;
-  fiscalCode: string;
-  address: string;
-}
-
-export interface Payer extends User {
+  id: string;
   firstName: string;
+  shopName: string | null;
   lastName: string;
-  birthDate: Date;
+  email: string;
+  address: string;
+  fiscalCode: string;
+  birthDate: string;
+  weeklyExpensesLimit: number;
+  weeklyTransferLimit: number;
+  amountSpent: number;
+  totalCashback: number;
+  paymentAccountId: number | string;
+  savings: number;
+  paymentAccountType: string;
+  role: string;
+  valid: boolean;
 }
 
-export interface Shopper extends User {
-  shopName: string;
+export interface Feature {
+  title: 'string';
+  icon: PrimeIcons;
 }

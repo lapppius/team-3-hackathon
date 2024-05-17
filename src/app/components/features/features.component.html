@@ -1,0 +1,13 @@
+<ul>
+  @for(feature of features; track feature){
+  <li>
+    <span class="material-icons-outlined">
+      {{ feature?.icon }}
+    </span>
+    <span>
+      {{ feature.title }}
+    </span>
+  </li>
+
+  }
+</ul>

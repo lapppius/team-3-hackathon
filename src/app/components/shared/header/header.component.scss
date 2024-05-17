@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   border-bottom: 1px solid var(--primary-border-color);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  filter: drop-shadow(0 0 0.2rem var(--primary-border-color));
 
   header {
     padding: 0.7rem;

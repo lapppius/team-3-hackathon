@@ -1,33 +1,30 @@
+<app-profile-header [user]="shopper" />
 <div>
-<app-box [title]="'Shop User Profile'">
+  <app-box [title]="'Shop User Profile'">
     <form>
-    <ng-container>
-    <div class="button-container">
-            <button 
-                pButton 
-                pRipple 
-                [routerLink] = "['/shopProfile/addBankAccount']"
-                label="Add Payment Bank Account ">
-            </button>
-            <button 
-                pButton 
-                pRipple 
-                [routerLink] = "['/shopProfile/updateShopperAccount']"
-                label="Update User Data">
-            </button>
-            <button 
-                pButton 
-                pRipple 
-                [routerLink] = "['/shopProfile/transHistory']"
-                label="View transaction History">
-            </button>
-            <button 
-                pButton 
-                pRipple 
-                label="Create QR code">
-            </button>
+      <ng-container>
+        <div class="button-container">
+          <button
+            pButton
+            pRipple
+            [routerLink]="['/shopProfile/addBankAccount']"
+            label="Add Payment Bank Account "
+          ></button>
+          <button
+            pButton
+            pRipple
+            [routerLink]="['/shopProfile/updateShopperAccount']"
+            label="Update User Data"
+          ></button>
+          <button
+            pButton
+            pRipple
+            [routerLink]="['/shopProfile/transHistory']"
+            label="View transaction History"
+          ></button>
+          <button pButton pRipple label="Create QR code"></button>
         </div>
-        </ng-container>
+      </ng-container>
     </form>
-</app-box>
+  </app-box>
 </div>

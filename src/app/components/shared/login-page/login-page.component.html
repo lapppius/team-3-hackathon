@@ -1,18 +1,14 @@
-<div class="signup">
-    <app-box [title]="'Log in'">
-        <form>
-                <p-floatLabel>
-                    <input pInputText />
-                    <label for="email">Email</label>
-                </p-floatLabel>
-                <small>
-                    Please enter your email to log in.
-                </small>
-                <p-floatLabel>
-                    <p-password formControlName="confirmPassword" [feedback]="false" />
-                    <label for="confirmPassword">Password</label>
-                  </p-floatLabel>
-                <p-button [routerLink] = "['/shopProfile']" label="Log in" />
-        </form>
-    </app-box>
-</div>
+<app-box [title]="'Log in'">
+  <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+    <p-floatLabel>
+      <input pInputText id="email" formControlName="email" type="email" />
+      <label for="email">email</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <p-password formControlName="password" [feedback]="false" />
+      <label for="password">Password</label>
+    </p-floatLabel>
+    <p-button label="Log in" type="submit" />
+    <small><a routerLink="/signup"> Don't have an account? </a> </small>
+  </form>
+</app-box>

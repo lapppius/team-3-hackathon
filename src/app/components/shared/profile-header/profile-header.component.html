@@ -1,0 +1,21 @@
+<header>
+  <div>
+    <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+    <p>Email: {{ user.email }}</p>
+    <p>Fiscal Code: {{ user.fiscalCode }}</p>
+    <p>Birth Date: {{ user.birthDate | date }}</p>
+    <p>Address: {{ user.address }}</p>
+    <p>Amount: {{ user.amountSpent }}</p>
+    <p>Amount: {{ user.amountSpent }}</p>
+    <p>{{ user | json }}</p>
+  </div>
+
+  <div class="card flex justify-content-center">
+    <p-button
+      label="Edit"
+      icon="pi pi-user-edit"
+      [rounded]="true"
+      routerLink="edit"
+    />
+  </div>
+</header>
