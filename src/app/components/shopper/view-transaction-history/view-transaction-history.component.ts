@@ -28,7 +28,7 @@ export class ViewTransactionHistoryComponent {
 
   constructor(private http: HttpClient) {}
 
-  public shopId: string | null = '87654321';
+  public shopId: string | null = '4567';
 
   ngOnInit() {
     this.http
